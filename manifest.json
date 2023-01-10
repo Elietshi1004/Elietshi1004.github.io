@@ -1,11 +1,11 @@
 {
-    "name": "palmaresuniv",
-    "short_name": "palmaresuniv",
+    "name": "falangadmin",
+    "short_name": "falanga",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Admin de gestion de falanga.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

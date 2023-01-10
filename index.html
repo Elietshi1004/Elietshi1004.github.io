@@ -18,28 +18,109 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Tous vos epargnes avec FALANGA.">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="palmaresuniv">
+  <meta name="apple-mobile-web-app-title" content="adminfalanga">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>palmaresuniv</title>
+  <title>adminfalanga</title>
   <link rel="manifest" href="manifest.json">
+  <style>
+    .lds-ripple {
+      display: inline-block;
+      position: relative;
+      width: 80px;
+      height: 80px;
+    }
+
+    .lds-ripple div {
+      background-color: #e64230;
+      position: absolute;
+      border: 4px solid #fff;
+      opacity: 1;
+      border-radius: 50%;
+      animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+
+    .lds-ripple div:nth-child(2) {
+      animation-delay: -0.5s;
+    }
+
+    @keyframes lds-ripple {
+      0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+      }
+
+      100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+      }
+    }
+
+    .container {
+      height: 100%;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+  </style>
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = '3601563569';
+    var serviceWorkerVersion = '1670487719';
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
 </head>
 <body>
+  <div class="container">
+    <div class="center">
+      <div class="lds-ripple">
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-firestore.js"></script>
+  
+  <script type="module">
+   
+const firebaseConfig = {
+    apiKey: "AIzaSyDb9e8KJ_MldTjJ_ubsLTQDhhNpw5b8R-w",
+    authDomain: "falanga-cd.firebaseapp.com",
+    projectId: "falanga-cd",
+    storageBucket: "falanga-cd.appspot.com",
+    messagingSenderId: "509026483520",
+    appId: "1:509026483520:web:3b26d2010648bb70590ea5",
+    measurementId: "G-4ETNDR0797"
+  };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // const app = initializeApp(firebaseConfig);
+    // const analytics = getAnalytics(app);
+  </script>
+ 
+  
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
